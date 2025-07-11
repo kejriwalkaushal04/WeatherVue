@@ -48,9 +48,9 @@ const Home = ({ weatherData }) => {
                         <WeatherCard title="Temperature" value={`${(weatherData.main.temp)}°C`} />
                         <WeatherCard title="Temperature Feels like" value={`${(weatherData.main.feels_like)}°C`} />
                         <WeatherCard title="Humidity" value={`${weatherData.main.humidity}%`} />
-                        <WeatherCard title="Wind Speed" value={`${weatherData.wind.speed*18/5} km/h`} />
+                        <WeatherCard title="Wind Speed" value={`${(weatherData.wind.speed * 18 / 5).toFixed(1)} km/h`}/>
                         <WeatherCard title="Weather" value={weatherData.weather[0].main} />
-                        <WeatherCard title="Weather" value={weatherData.weather[0].description} />
+                        <WeatherCard title="Weather Description" value={weatherData.weather[0].description} />
                         <WeatherCard title="Sunrise" value={`${new Date(weatherData.sys.sunrise*1000).toLocaleTimeString()}`} />
                         <WeatherCard title="Sunset" value={`${new Date(weatherData.sys.sunset*1000).toLocaleTimeString()}`} />
                         
