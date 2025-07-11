@@ -17,7 +17,7 @@ function App() {
     try {
       const response = await axios.get(url);
       setWeatherData(response.data);
-      console.log("Weather Data:", response.data);
+     // console.log("Weather Data:", response.data);
 
     } catch (error) {
       console.error("Error fetching weather data:", error);
